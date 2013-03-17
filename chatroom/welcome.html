@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script type="text/javascript" src="/script/jquery-1.7.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/chatroom.css"></link>
+  </head>
+  <body onload="onLoad()">
+    <script type="application/json" id="nickname">
+      {{ nickname }}
+    </script>
+    <script type="text/javascript">
+      function onLoad() {
+      }
+    </script>
+    <div class='top-container'>
+      Welcome to the chatroom demo.<br>
+      Please type in a name by which you'd like to be identified:<br>
+      <form method="post" action="/updatenick">
+        <input type="text" name="nickname">
+      </form>
+    </div>
+  </body>
+</html>

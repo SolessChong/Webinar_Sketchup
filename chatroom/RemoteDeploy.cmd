@@ -1,0 +1,1 @@
+ python E:\progra~1\Google\google_appengine\appcfg.py update F:\website\gae\Python\simple-appengine-chatroom

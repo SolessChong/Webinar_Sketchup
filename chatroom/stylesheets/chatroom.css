@@ -1,0 +1,62 @@
+body {
+  font: 12px/1.4em Verdana,sans-serif;
+  background-color: #FEFEFE;
+}
+
+a {
+  color: #FFC757;
+  text-decoration: none;
+}
+
+.transcript {
+  float: left;
+  width: 400px;
+}
+
+.roster {
+  float: right;
+  width: 400px;
+}
+
+.section-header {
+  background-color: #DDDDDD;
+}
+
+.transcript-name {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+div {
+  padding: 5px;
+}
+
+.top-container {
+  width: 1024px;
+  height: 384px;
+  background-color: #CCCCCC;
+}
+
+.transcript {
+  width: 512px;
+  float: left;
+}
+
+.roster {
+  width: 384px;
+  float: right;
+}
+
+.bottom-container {
+  float: top;
+  width: 1024px;
+}
+
+#message-text-input {
+  width: 768px;
+}
+
+#msg{
+  position: absolute;
+  top: 650px;
+}

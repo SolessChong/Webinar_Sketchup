@@ -1,0 +1,14 @@
+So here's what we need to do:
+
+ - create a basic handler to render the room
+   - write the python pieces
+   - write some html/css
+   - write the javascript pieces
+     - a roster handler
+     - a transcript handler
+     - an input handler
+ - model the transcript
+ - model the people who are viewing the room
+ - broadcast data
+ - handle input
+ - handle presence

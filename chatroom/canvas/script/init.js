@@ -1,0 +1,68 @@
+function init()
+{
+	//绘制颜色区
+	//黑色
+	var c=document.getElementById("color_black");
+	ctx=c.getContext("2d");
+	ctx.fillStyle="black";
+	ctx.fillRect(0,0,50,50);
+	//橙色
+	c=document.getElementById("color_orange");
+	ctx=c.getContext("2d");
+	ctx.fillStyle="orange";
+	ctx.fillRect(0,0,50,50);
+	//蓝色
+	c=document.getElementById("color_blue");
+	ctx=c.getContext("2d");
+	ctx.fillStyle="blue";
+	ctx.fillRect(0,0,50,50);
+	//绿色
+	c=document.getElementById("color_green");
+	ctx=c.getContext("2d");
+	ctx.fillStyle="green";
+	ctx.fillRect(0,0,50,50);
+	//黄色
+	c=document.getElementById("color_yellow");
+	ctx=c.getContext("2d");
+	ctx.fillStyle="yellow";
+	ctx.fillRect(0,0,50,50);
+	//当前颜色状态
+	drawcolornow();
+	//绘制工具区
+	//自由线
+	c=document.getElementById("tool_free");
+	ctx=c.getContext("2d");
+	ctx.strokeStyle = colorstroke;
+	ctx.beginPath();
+	ctx.arc(15,25,10,0,Math.PI,false);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(35,25,10,0,Math.PI,true);
+	ctx.stroke();
+	//矩形
+	c=document.getElementById("tool_rect");
+	ctx=c.getContext("2d");
+	ctx.strokeRect(10,10,30,30);
+	//填充矩形
+	c=document.getElementById("tool_fillrect");
+	ctx=c.getContext("2d");
+	ctx.fillRect(10,10,30,30);
+	//圆
+	c=document.getElementById("tool_circle");
+	ctx=c.getContext("2d");
+	ctx.arc(25,25,15,0,2*Math.PI,true);
+	ctx.stroke();
+	//填充圆
+	c=document.getElementById("tool_fillcircle");
+	ctx=c.getContext("2d");
+	ctx.arc(25,25,15,0,2*Math.PI,true);
+	ctx.stroke(); ctx.fill();
+	//直线
+	c=document.getElementById("tool_straightline");
+	ctx=c.getContext("2d");
+	ctx.strokeStyle = colorstroke;
+	ctx.beginPath();
+	ctx.moveTo(10,25);
+	ctx.lineTo(40,25);
+	ctx.stroke();
+}

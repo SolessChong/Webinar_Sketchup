@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <script type="text/javascript" src="/_ah/channel/jsapi"></script>
+    <script type="text/javascript" src="/script/jquery-1.7.js"></script>
+    <script type="text/javascript" src="/script/roster.js"></script>
+    <script type="text/javascript" src="/script/transcript.js"></script>
+    <script type="text/javascript" src="/script/sender.js"></script>
+    <script type="text/javascript" src="/script/main.js"></script>
+    <script type="text/javascript" src="/canvas/script/drawaction.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/chatroom.css"></link>
+    <link rel="stylesheet" type="text/css" href="canvas/canvasstyle.css">
+    <script src="canvas/script/init.js"></script>
+    <script src="canvas/script/option.js"></script>
+    <script src="canvas/script/drawcontrol.js"></script>
+  </head>
+  <body onload="onLoad()">
+    <script type="application/json" id="initial-messages">
+      {{ initial_messages|safe }}
+    </script>
+    <script type="text/javascript">
+      function onLoad() {
+        var main = new Main('{{ token }}', 
+                            JSON.parse($('#initial-messages').text()));
+      }
+    </script>
+
+<div id="msg">
+    <div class='top-container' style="top:400px;">
+      <div class='transcript' id='transcript-div'>
+      </div>
+      <div class='roster' id='roster-div'>
+      </div>
+    </div>
+    <div class='bottom-container'>
+      <div class='message-box'>
+  <form id='message-form'>
+    <input type="text" id="message-text-input"/>
+    <input type="submit" id="message-text-submit" value="Send"/>
+  </form>  
+      </div>
+    </div>
+</div>
+    <input type="button" onclick="cleancanvas()" content="clear"/>
+    <div id="canvas">
+    <!-- ¹¤¾ßÇø -->
+	<canvas id="tool_free" width="50" height="50" class = "pos_tool_1" onmousedown = "changefreeline(event)">draw free line</canvas>
+	<canvas id="tool_rect" width="50" height="50" class = "pos_tool_2" onmousedown = "changerect(event)">draw Rectangular Shape</canvas>
+	<canvas id="tool_fillrect" width="50" height="50" class = "pos_tool_3" onmousedown = "changefillrect(event)">draw filled Rectangular Shape</canvas>
+	<canvas id="tool_circle" width="50" height="50" class = "pos_tool_4" onmousedown = "changecircle(event)">draw circle</canvas>
+	<canvas id="tool_fillcircle" width="50" height="50" class = "pos_tool_5" onmousedown = "changefillcircle(event)">draw filled circle</canvas>
+	<canvas id="tool_straightline" width="50" height="50" class = "pos_tool_6" onmousedown = "changestraightline(event)">draw straight line</canvas>
+    <!-- Ö÷»æÍ¼Çø -->
+    <canvas id="myCanvas" width="800" height="600" class = "main" onmousemove="draw(event)" onmousedown = "startdraw(event)" onclick = "enddraw(event)">
+    Your browser does not support the canvas element.
+    </canvas>
+    <!-- ÑÕÉ«Ñ¡ÔñÇø -->
+	<canvas id="color_black" width="50" height="50" class = "pos_color_1" onmousedown = "changeblack(event)">choose black</canvas>
+	<canvas id="color_white" width="46" height="46" class = "pos_color_2" onmousedown = "changewhite(event)">choose white</canvas>
+	<canvas id="color_orange" width="50" height="50" class = "pos_color_3" onmousedown = "changeorange(event)">choose orange</canvas>
+	<canvas id="color_blue" width="50" height="50" class = "pos_color_4" onmousedown = "changeblue(event)">choose blue</canvas>
+	<canvas id="color_green" width="50" height="50" class = "pos_color_5" onmousedown = "changegreen(event)">choose green</canvas>
+	<canvas id="color_yellow" width="50" height="50" class = "pos_color_6" onmousedown = "changeyellow(event)">choose yellow</canvas>
+	<canvas id="color_state" width="46" height="46" class = "pos_color_now">color state</canvas>
+    <!-- ÁÄÌìÇø -->
+
+
+    <script type="text/javascript">
+    var isdraw = false;
+    var width = 800,height = 600;
+    var imageData;
+    var xbefore = -1,ybefore = -1;
+    var drawmode = "freeline";
+    var colorstroke = "black";
+    var colorfill = "black";
+    var ctx;
+    init();
+
+
+    </script>
+
+    </div>
+  </body>
+</html>

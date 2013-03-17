@@ -1,0 +1,98 @@
+canvas.main
+{
+	position: absolute;
+	left: 60px;
+	top: 20px;
+	border:1px solid #c3c3c3;
+}
+canvas.pos_tool_1
+{
+	position:absolute;
+	top:20px;
+	left :10px;
+	border:1px solid #c3c3c3;
+}
+canvas.pos_tool_2
+{
+	position:absolute;
+	top:70px;
+	left :10px;
+	border:1px solid #c3c3c3;
+}
+canvas.pos_tool_3
+{
+	position:absolute;
+	top:120px;
+	left :10px;
+	border:1px solid #c3c3c3;
+}
+canvas.pos_tool_4
+{
+	position:absolute;
+	top:170px;
+	left :10px;
+	border:1px solid #c3c3c3;
+}
+canvas.pos_tool_5
+{
+	position:absolute;
+	top:220px;
+	left :10px;
+	border:1px solid #c3c3c3;
+}
+canvas.pos_tool_6
+{
+	position:absolute;
+	top:270px;
+	left :10px;
+	border:1px solid #c3c3c3;
+}
+canvas.pos_color_1
+{
+	position:absolute;
+	top:20px;
+	left :861px;
+}
+canvas.pos_color_2
+{
+	position:absolute;
+	border-color: black;
+	border-style: solid;
+	border-width: 2px;
+	top:70px;
+	left :861px;
+}
+canvas.pos_color_3
+{
+	position:absolute;
+	top:120px;
+	left :861px;
+}
+canvas.pos_color_4
+{
+	position:absolute;
+	top:170px;
+	left :861px;
+}
+canvas.pos_color_5
+{
+	position:absolute;
+	top:220px;
+	left :861px;
+}
+canvas.pos_color_6
+{
+	position:absolute;
+	top:270px;
+	left :861px;
+}
+
+canvas.pos_color_now
+{
+	position:absolute;
+	border-color: black;
+	border-style: solid;
+	border-width: 2px;
+	top:570px;
+	left :861px;
+}

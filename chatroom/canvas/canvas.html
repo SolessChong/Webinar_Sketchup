@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="canvasstyle.css">
+<script src="script/init.js"></script>
+<script src="script/option.js"></script>
+<script src="script/drawcontrol.js"></script>
+</head>
+<body>
+<!-- 工具区 -->
+<canvas id="tool_free" width="50" height="50" class = "pos_tool_1" onmousedown = "changefreeline(event)">draw free line</canvas>
+<canvas id="tool_rect" width="50" height="50" class = "pos_tool_2" onmousedown = "changerect(event)">draw Rectangular Shape</canvas>
+<canvas id="tool_fillrect" width="50" height="50" class = "pos_tool_3" onmousedown = "changefillrect(event)">draw filled Rectangular Shape</canvas>
+<canvas id="tool_circle" width="50" height="50" class = "pos_tool_4" onmousedown = "changecircle(event)">draw circle</canvas>
+<canvas id="tool_fillcircle" width="50" height="50" class = "pos_tool_5" onmousedown = "changefillcircle(event)">draw filled circle</canvas>
+<!-- 主绘图区 -->
+<canvas id="myCanvas" width="800" height="600" class = "main" onmousemove="draw(event)" onmousedown = "startdraw(event)" onclick = "enddraw(event)">
+Your browser does not support the canvas element.
+</canvas>
+<!-- 颜色选择区 -->
+<canvas id="color_black" width="50" height="50" class = "pos_color_1" onmousedown = "changeblack(event)">choose black</canvas>
+<canvas id="color_white" width="46" height="46" class = "pos_color_2" onmousedown = "changewhite(event)">choose white</canvas>
+<canvas id="color_orange" width="50" height="50" class = "pos_color_3" onmousedown = "changeorange(event)">choose orange</canvas>
+<canvas id="color_state" width="46" height="46" class = "pos_color_now">color state</canvas>
+<!-- 聊天区 -->
+
+
+<script type="text/javascript">
+var isdraw = false;
+var width = 800,height = 600;
+var imageData;
+var xbefore = -1,ybefore = -1;
+var drawmode = "freeline";
+var colorstroke = "black";
+var colorfill = "black";
+var ctx;
+init();
+
+</script>
+
+</body>
+</html>
